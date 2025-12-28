@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/facicon.png" type="image/x-icon">
     <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/44c614560c.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1>Welcome Home</h1>
+
+<body class="bg-black">
+    <main class="h-screen pt-10 bg-[#F4F5F7] lg:w-2/4 mx-auto px-3 md:px-5">
+       <!-- Balance and logout -->
+        <div class="flex items-center justify-between text-gray-600">
+            <!-- balance -->
+             <div class="flex items-center gap-2">
+                <img class="w-12" src="./assets/tickmark.png" alt="">
+                <div>
+                    <p class="text-xl font-extrabold mb-1">$1000</p>
+                    <p class="text-gray-600">Available Blance</p>
+                </div>
+             </div>
+             <!-- logout -->
+              <div class="flex items-center gap-2">
+                <button class="text-gray-600 btn-goash btn"><span><i class="fa-solid fa-arrow-right-from-bracket"></i></span> Log Out</button>
+              </div>
+        </div>
+        <!-- welcome text -->
+         <div class="my-7">
+            <h3 class="text-2xl font-semibold">🔥 Welcome to Payooo!</h3>
+            <p class="text-gray-600 mt-3">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
+         </div>
+    </main>
 </body>
+
 </html>
