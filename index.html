@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/facicon.png" type="image/x-icon">
+    <title>Digital Wallet APP</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-black">
+    <main class="h-screen pt-20 bg-[#F4F5F7] lg:w-2/4 mx-auto px-3 md:px-5">
+        <!-- logo Section -->
+        <div class="flex justify-center items-center">
+            <div class="relative">
+                <!-- Ring Image -->
+                <img src="./assets/ring.png" alt="Ring" cla0ss="w-full h-full object-contain">
+                <!-- Tickmark Image -->
+                <img src="./assets/tickmark.png" alt="Tickmark"
+                    class="absolute top-1/4 left-1/2 w-1/3 transform -translate-x-1/2 -translate-y-1/2">
+            </div>
+        </div>
+        <!-- Form Section -->
+        <form class="relative -top-38 bg-white card card-body">
+            <fieldset class="fieldset">
+                <label class="label">Phone Number</label>
+                <input id="phone-number" type="text" class="input w-full" placeholder="Your phone number" />
+                <label class="label">4 Digit Pin</label>
+                <input id="input-pin" type="text" class="input w-full" placeholder="Enter 4 Digit Pin" />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button id="login-btn" class="btn mt-4 bg-[#0874F2] text-white">Login</button>
+            </fieldset>
+        </form>
+    </main>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
