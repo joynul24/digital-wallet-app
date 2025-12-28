@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/facicon.png" type="image/x-icon">
     <title>Home Page</title>
+    <link rel="stylesheet" href="./index.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/44c614560c.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-black">
+<body class="primary-bg">
     <main class="h-screen pt-10 bg-[#F4F5F7] lg:w-2/4 mx-auto px-3 md:px-5">
        <!-- Balance and logout -->
         <div class="flex items-center justify-between text-gray-600">
@@ -33,6 +34,15 @@
             <h3 class="text-2xl font-semibold">🔥 Welcome to Payooo!</h3>
             <p class="text-gray-600 mt-3">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
          </div>
+         <!-- User Actions Buttons -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+            <button class="btn btn-goast text-gray-600"><img src="./assets/add-money.png" alt="">Add Money</button>
+            <button class="btn btn-goast text-gray-600"><img src="./assets/cash-out.png" alt="">CashOut</button>
+            <button class="btn btn-goast text-gray-600"><img src="./assets/transfer-money.png" alt="">Transfer Money</button>
+            <button class="btn btn-goast text-gray-600"><img src="./assets/get-bonus.png" alt="">Get Bonus</button>
+            <button class="btn btn-goast text-gray-600"><img src="./assets/pay-bill.png" alt="">Pay Bill</button>
+            <button class="btn btn-goast text-gray-600"><img src="./assets/transactions.png" alt="">Transactions</button>
+          </div>
     </main>
 </body>
 
