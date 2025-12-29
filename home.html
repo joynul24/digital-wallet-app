@@ -20,32 +20,45 @@
              <div class="flex items-center gap-2">
                 <img class="w-12" src="./assets/tickmark.png" alt="">
                 <div>
-                    <p class="text-xl font-extrabold mb-1">$ <span id="available-balance">100</span></p>
+                    <p class="text-xl font-extrabold mb-1">$ <span id="available-balance">0</span></p>
                     <p class="text-gray-600">Available Blance</p>
                 </div>
              </div>
              <!-- logout -->
               <div class="flex items-center gap-2">
-                <button class="text-gray-600 btn-goash btn"><span><i class="fa-solid fa-arrow-right-from-bracket"></i></span> Log Out</button>
+                <button id="btn-logOut" class="text-gray-600 btn-goash btn"><span><i class="fa-solid fa-arrow-right-from-bracket"></i></span> Log Out</button>
               </div>
         </div>
         <!-- welcome text -->
          <div class="my-7">
-            <h3 class="text-2xl font-semibold">🔥 Welcome to Payooo!</h3>
+            <h3 class="text-2xl font-semibold"><span class="animate-pulse">🔥</span>
+          <span class="text-rotate">
+            <span>
+              <span>Welcome to Payooo!</span>
+              <span>Digital Wallet App</span>
+              <span>Digital Money Transfer</span>
+            </span>
+          </span>
+            </h3>
             <p class="text-gray-600 mt-3">Enjoy easy and convenient financial services with us. <br> Cashout charge is low and </p>
          </div>
-           <div class="divider divider-warning font-semibold text-gray-700">Actions</div>
+           <!-- <div class="divider divider-warning font-semibold text-gray-700"><span class="animate-bounce">Actions</span></div> -->
+            <div class="my-5">
+              <h3 class="text-center text-xl font-bold text-gray-800">User Actions</h3>
+              <p class="text-center text-gray-600 w-82 mx-auto mt-2">If you want, you can click on the buttons below to perform the action of each button.</p>
+            </div>
          <!-- User Actions Buttons -->
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-            <button class="btn btn-goast text-gray-600"><img src="./assets/add-money.png" alt="">Add Money</button>
-            <button class="btn btn-goast text-gray-600"><img src="./assets/cash-out.png" alt="">CashOut</button>
-            <button class="btn btn-goast text-gray-600"><img src="./assets/transfer-money.png" alt="">Transfer Money</button>
-            <button class="btn btn-goast text-gray-600"><img src="./assets/get-bonus.png" alt="">Get Bonus</button>
-            <button class="btn btn-goast text-gray-600"><img src="./assets/pay-bill.png" alt="">Pay Bill</button>
-            <button class="btn btn-goast text-gray-600"><img src="./assets/transactions.png" alt="">Transactions</button>
+          <div class="border bg-white border-gray-300 rounded-xl p-3 grid md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+            <button id="btn-show-add-money" class="btn btn-goast text-gray-600"><img src="./assets/add-money.png" alt="">Add Money</button>
+            <button id="btn-show-cash-out" class="btn btn-goast text-gray-600"><img src="./assets/cash-out.png" alt="">CashOut</button>
+            <button id="btn-show-transfer-money" class="btn btn-goast text-gray-600"><img src="./assets/transfer-money.png" alt="">Transfer Money</button>
+            <button id="btn-show-get-bonus" class="btn btn-goast text-gray-600"><img src="./assets/get-bonus.png" alt="">Get Bonus</button>
+            <button id="btn-show-pay-bill" class="btn btn-goast text-gray-600"><img src="./assets/pay-bill.png" alt="">Pay Bill</button>
+            <button id="btn-show-transactions" class="btn btn-goast text-gray-600"><img src="./assets/transactions.png" alt="">Transactions</button>
           </div>
+
           <!-- Add Money Form Start -->
-           <form class="hidden card-body bg-white mt-5">
+           <form id="add-money-form" class="card-body bg-white mt-5">
             <p class="text-xl font-semibold">Add Money</p>
         <fieldset class="fieldset">
           <label class="label">Amount</label>
@@ -58,20 +71,75 @@
           <!-- Add Money Form End -->
 
           <!-- Cash Out Form Start -->
-            <form class="card-body bg-white mt-5">
+            <form id="cash-out-form" class="hidden card-body bg-white mt-5">
             <p class="text-xl font-semibold">Cash Out</p>
         <fieldset class="fieldset">
           <label class="label">Amount</label>
-          <input id="input-cash-out-amount" type="text" class="input w-full" placeholder="Your Amount" />
+          <input id="input-cash-out-amount" type="text" class="input w-full" placeholder="Enter amount to withdraw" />
           <label class="label">Pin Number</label>
-          <input id="input-cash-out-pin" type="text" class="input w-full" placeholder="Youre Pin" />
-          <button id="btn-cash-out" class="bg-[#0874F2] btn text-white mt-4">Cash Out</button>
+          <input id="input-cash-out-pin" type="text" class="input w-full" placeholder="Enter 4 digit pin number" />
+          <button id="btn-cash-out" class="bg-[#0874F2] btn text-white mt-4">Withdraw Money</button>
         </fieldset>
            </form>
           <!-- Cash Out Form End -->
+
+          <!-- Transfer Money form Start-->
+            <form id="transfer-money-form" class="hidden card-body bg-white mt-5">
+            <p class="text-xl font-semibold">Transfer Money</p>
+        <fieldset class="fieldset">
+          <label class="label">User Account Number</label>
+          <input id="input-transfer-user-number" type="text" class="input w-full" placeholder="Enter your 11 digit number" />
+          <label class="label">Amount</label>
+          <input id="input-transfer-money-amount" type="text" class="input w-full" placeholder="Enter amount to withdraw" />
+          <label class="label">Pin Number</label>
+          <input id="input-transfer-money-pin" type="text" class="input w-full" placeholder="Enter 4 digit pin number" />
+          <button id="btn-transfer-money" class="bg-[#0874F2] btn text-white mt-4">Send Now</button>
+        </fieldset>
+           </form>
+          <!-- Transfer Money form End -->
+
+          <!-- Get Bonus Form Start -->
+          <form id="get-bonus-form" class="hidden card-body bg-white mt-5">
+            <p class="text-xl font-semibold">Get Bonus</p>
+          <fieldset class="fieldset">
+          <label class="label">Enter Bonus Coupon</label>
+          <input id="input-transfer-money-pin" type="text" class="input w-full" placeholder="Enter your coupon" />
+          <button id="btn-get-bonus" class="bg-[#0874F2] btn text-white mt-4">Get Bonus</button>
+        </fieldset>
+           </form>
+          <!-- Get Bonus Form Emd -->
+
+          <!-- Pay Bill Form Start -->
+          <form id="pay-bill-form" class="hidden card-body bg-white mt-5">
+            <p class="text-xl font-semibold">Pay Bill</p>
+        <label class="label">Select To Pay</label>
+        <fieldset class="fieldset">
+       <select class="w-full select appearance-none">
+      <option disabled selected>Select back</option>
+      <option>Electricity Bill</option>
+      <option>Bank Deposit</option>
+      <option>Mobile Recharge</option>
+      <option>Gas Bill</option>
+      </select>
+          <label class="label">Biller Account Number</label>
+          <input id="input-pay-bill-number" type="text" class="input w-full" placeholder="Enter account number" />
+          <label class="label">Amount to Pay</label>
+          <input id="input-pay-bill-amount" type="text" class="input w-full" placeholder="Add Amount to pay" />
+          <label class="label">Pin Number</label>
+          <input id="input-pay-bill-pin" type="text" class="input w-full" placeholder="Enter 4 digit pin number" />
+          <button id="btn-pay-bill" class="bg-[#0874F2] btn text-white mt-4">Pay Now</button>
+          </fieldset>
+           </form>
+          <!-- Pay Bill Form End -->
+
+          <!-- Transactions Forn Start -->
+           <!-- Transactions Form End -->
+        
     </main>
     <script src="./js/addMoney.js"></script>
     <script src="./js/cashOut.js"></script>
+    <script src="./js/userActionsButton.js"></script>
+    <script src="./js/logOut.js"></script>
 </body>
 
 </html>
