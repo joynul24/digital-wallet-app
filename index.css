@@ -1,3 +1,8 @@
 .primary-bg{
     background-color: #1b80f3;
 }
+
+.btn-active{
+    /* background-color: #b8fad6; */
+    border-color: #469bfc;
+}
