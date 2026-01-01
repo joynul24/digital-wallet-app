@@ -1,3 +1,7 @@
+html{
+    overflow-y: scroll;
+}
+
 .primary-bg{
     background-color: #1b80f3;
 }

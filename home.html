@@ -20,7 +20,7 @@
              <div class="flex items-center gap-2">
                 <img class="w-12" src="./assets/tickmark.png" alt="">
                 <div>
-                    <p class="text-xl font-extrabold mb-1">$ <span id="available-balance">0</span></p>
+                    <p class="text-xl font-extrabold mb-1">$ <span id="available-balance">100</span></p>
                     <p class="text-gray-600">Available Balance</p>
                 </div>
              </div>
@@ -102,7 +102,7 @@
             <p class="text-xl font-semibold">Get Bonus</p>
           <fieldset class="fieldset">
           <label class="label">Enter Bonus Coupon</label>
-          <input id="input-transfer-money-pin" type="text" class="input w-full" placeholder="Enter your coupon" />
+          <input id="input-get-bonus-cupon" type="text" class="input w-full" placeholder="Enter your coupon" />
           <button id="btn-get-bonus" class="bg-[#0874F2] btn text-white mt-4">Get Bonus</button>
         </fieldset>
            </form>
@@ -113,7 +113,7 @@
             <p class="text-xl font-semibold">Pay Bill</p>
         <label class="label">Select To Pay</label>
         <fieldset class="fieldset">
-       <select class="w-full select appearance-none">
+       <select id="pay-bill-form-select" class="w-full select appearance-none">
       <option disabled selected>Select back</option>
       <option>Electricity Bill</option>
       <option>Bank Deposit</option>
@@ -131,14 +131,26 @@
            </form>
           <!-- Pay Bill Form End -->
 
-          <!-- Transactions Forn Start -->
-           <!-- Transactions Form End -->
+          <!-- Transactions histry Start -->
+           <div id="history-all-container" class="hidden my-2">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xl font-semibold">Transaction History</h3>
+              <button class="btn btn-goast text-gray-600">View All</button>
+            </div>
+            <div class="" id="transactions-history-container">
+              
+            </div>
+           </div>
+           <!-- Transactions histry End -->
         
     </main>
     <script src="./js/addMoney.js"></script>
     <script src="./js/cashOut.js"></script>
     <script src="./js/userActionsButton.js"></script>
     <script src="./js/logOut.js"></script>
+    <script src="./js/transferMoney.js"></script>
+    <script src="./js/getBonus.js"></script>
+    <script src="./js/payBill.js"></script>
 </body>
 
 </html>
